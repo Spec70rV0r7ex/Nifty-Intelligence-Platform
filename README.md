@@ -21,7 +21,7 @@ Our closed-loop AI system operates in four distinct stages:
 nifty-intelligence-platform/
 │
 ├── data/
-│   ├── raw.zip                 # Original historical CSVs before running any file first unzip the file in the data folder itself
+│   ├── raw.zip              # Original historical CSVs before running any file first unzip the file in the data folder itself
 │   ├── processed/           # Cleaned data with engineered features formed after running data_pipeline.py
 │   └── metadata/
 │
