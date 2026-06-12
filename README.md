@@ -21,11 +21,11 @@ Our closed-loop AI system operates in four distinct stages:
 nifty-intelligence-platform/
 │
 ├── data/
-│   ├── raw/                 # Original historical CSVs
-│   ├── processed/           # Cleaned data with engineered features
+│   ├── raw.zip                 # Original historical CSVs before running any file first unzip the file in the data folder itself
+│   ├── processed/           # Cleaned data with engineered features formed after running data_pipeline.py
 │   └── metadata/
 │
-├── models/                  # Stored .joblib XGBoost
+├── models/                  # Stored .joblib XGBoost after running predictor.py
 │
 ├── src/
 │   ├── features.py          # Data ingestion and feature engineering
