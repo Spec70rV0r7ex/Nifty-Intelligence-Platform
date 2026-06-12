@@ -1,16 +1,16 @@
-# 📈 Nifty50 Intelligent Investment Platform
+# Nifty50 Intelligent Investment Platform
 
-An end-to-end, institutional-grade AI platform designed to transform raw Nifty50 market data into actionable investment intelligence. This system combines robust tree-based Machine Learning (XGBoost), Modern Portfolio Theory, and advanced Model Explainability (SHAP) into a single, cohesive Streamlit dashboard.
+An end to end, institutional grade AI platform designed to transform raw Nifty50 market data into actionable investment intelligence. This system combines robust tree based Machine Learning (XGBoost), Modern Portfolio Theory, and advanced Model Explainability (SHAP) into a single, cohesive Streamlit dashboard.
 
 ---
 
 ## System Architecture
 
-Our closed-loop AI system operates in four distinct stages:
-1. **Data & Feature Engineering:** Cleans historical Nifty50 data and engineers 10+ technical indicators (RSI, MACD, Bollinger Bands, Volatility, Z-Scores) while preventing look-ahead bias.
-2. **Predictive Modeling Engine:** Utilizes an Extreme Gradient Boosting (XGBoost) architecture validated via strict Time-Series cross-validation to predict the probability of positive 5-day forward returns. 
-3. **Automated Portfolio Construction:** Integrates directly with the AI engine to isolate the Top 10 High-Conviction Buy Candidates and optimizes their capital allocation using PyPortfolioOpt (Sharpe Ratio maximization).
-4. **AI Transparency:** Deploys Game-Theoretic Shapley values (SHAP TreeExplainer) to break open the "black box" and mathematically prove *why* the model makes its decisions.
+Our closed loop AI system operates in four distinct stages:
+1. **Data and Feature Engineering:** Cleans historical Nifty50 data and engineers 10+ technical indicators (RSI, MACD, Bollinger Bands, Volatility, Z-Scores) while preventing look-ahead bias.
+2. **Predictive Modeling Engine:** Utilizes an Extreme Gradient Boosting (XGBoost) architecture validated via strict Time Series cross validation to predict the probability of positive 5 day forward returns. 
+3. **Automated Portfolio Construction:** Integrates directly with the AI engine to isolate the Top 10 High Conviction Buy Candidates and optimizes their capital allocation using PyPortfolioOpt (Sharpe Ratio maximization).
+4. **AI Transparency:** Deploys Game Theoretic Shapley values (SHAP TreeExplainer) to break open the "black box" and mathematically prove *why* the model makes its decisions.
 
 ---
 
@@ -42,7 +42,7 @@ nifty-intelligence-platform/
 
 ---
 
-## Installation & Environment Setup
+## Installation and Environment Setup
 
 Due to strict binary dependencies between numerical libraries, please follow these installation instructions exactly to ensure a stable environment.
 
@@ -81,7 +81,7 @@ python src/features.py
 ```
 
 **Step 2: Train the XGBoost Engine**
-Trains 50 unique tree-based models, validates them using Time-Series splits, saves the `.joblib` files, and generates the live market forecast.
+Trains 50 unique tree based models, validates them using Time-Series splits, saves the `.joblib` files, and generates the live market forecast.
 
 ```bash
 python src/predictor.py
@@ -99,12 +99,8 @@ streamlit run app/main.py
 ## Dashboard Features
 
 * **Tab 1: Market Forecast:** A live heatmap ranking the Nifty50 universe by their mathematical probability of generating positive returns over the next 5 days.
-* **Tab 2: Portfolio Builder:** A Closed-Loop allocation system. It automatically pulls the AI's Top 10 Buy signals and balances the capital based on your selected risk profile (Conservative, Balanced, Aggressive).
+* **Tab 2: Portfolio Builder:** A Closed Loop allocation system. It automatically pulls the AI's Top 10 Buy signals and balances the capital based on your selected risk profile (Conservative, Balanced, Aggressive).
 * **Tab 3: AI Explainability:** Breaks open the "black box." Select any stock to see a dynamic SHAP Matplotlib chart showing exactly which technical indicators drove the AI's latest prediction.
-* **Tab 4: Risk & Anomalies:** Scans the latest day of trading data to flag extreme volatility and unusual trading volume using statistical Z-Scores.
+* **Tab 4: Risk and Anomalies:** Scans the latest day of trading data to flag extreme volatility and unusual trading volume using statistical Z Scores.
 
 ---
-
-```
-
-```
